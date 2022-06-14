@@ -1,13 +1,8 @@
 from dataclasses import dataclass
 from typing import List
 
+from person import Person
 from child import Child
-
-
-@dataclass(frozen=True)
-class Person:
-    name: str
-    age: int
 
 
 @dataclass(frozen=True)

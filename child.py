@@ -1,7 +1,6 @@
 from dataclasses import dataclass
-from typing import List
 
-from parent import Person
+from person import Person
 
 
 @dataclass(frozen=True)
