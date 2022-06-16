@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from child import Child
+from objects.child import Child
 
 
 @dataclass(frozen=True)
