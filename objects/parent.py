@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import List
 
-from person import Person
-from child import Child
+from objects.child import Child
+from objects.person import Person
 
 
 @dataclass(frozen=True)

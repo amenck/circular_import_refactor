@@ -1,5 +1,4 @@
-from child import Child
-from parent import Parent
+from objects.parent import Parent
 
 
 def main():
