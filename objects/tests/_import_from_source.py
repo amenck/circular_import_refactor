@@ -81,10 +81,10 @@ class _ImportFromSourceChecker(NodeVisitor):
             assert hasattr(module, alias.name)
             attr = getattr(module, alias.name)
 
-            # For some objects (pretty much everything except for classes and functions), we won't have a __module__
-            # magic which tells us which module they were defined in... in that case there's not much we can do here,
-            # since we cannot easily figure out where we *should* be importing this from in the first place.
-            if hasattr(attr, "__module__"):
+            # For some objects (pretty much everything except for classes and functions), we are not able to figure
+            # out which module they were defined in... in that case there's not much we can do here, since we cannot
+            # easily figure out where we *should* be importing this from in the first place.
+            if isinstance(attr, type) or callable(attr):
                 attribute_module = attr.__module__
             else:
                 continue
